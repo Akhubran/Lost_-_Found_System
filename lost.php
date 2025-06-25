@@ -1,4 +1,4 @@
-<?php
+    <?php
 // Include database connection
 include 'connection.php';
 
