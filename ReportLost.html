@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ReportPages.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Lost</li>
+                    <li>Report Lost</li>
+                    <li>Found</li>
+                    <li>Report Found</li>
+                    <li>Profile</li>
+                    <li><button class="sign-out">Sign Out</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h1 class="page-title">Report <span>Lost</span> Item</h1>
+            
+            <form action="process_lost.php" method="post">
+                <div class="form-group">
+                    <label for="name">Name :</label>
+                    <input type="text" id="name" name ="name" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="item">Item :</label>
+                    <input type="text" id="item" name ="item" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location :</label>
+                    
+                    <select id="location" name ="location" class="form-control">
+                        <option value="" selected disabled>Select Location</option>
+                        <option value="Library">Library</option>
+                        <option value="Student Center(STC)">Student Center(STC)</option>
+                        <option value="MSB">MSB</option>
+                        <option value="STMB">STMB</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Date :</label>
+                    <input type="date" id="date" name ="date" class="form-control" placeholder="mm/dd/yyyy">
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Item Description :</label>
+                    <textarea id="description" name ="description" class="form-control"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo">Upload Photo :</label>
+                    <input type="file" id="photo" name="photo" class="form-control">
+                    <div class="form-control upload-btn">
+                        <span class="upload-text"></span>
+                        <span class="upload-icon">⬆️</span>
+                    </div>
+                </div>
+                
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                    <button type="reset" class="btn btn-reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="site-map">
+                    <h3>Site</h3>
+                    <ul class="footer-links">
+                        <li>Lost</li>
+                        <li>Report Lost</li>
+                        <li>Found</li>
+                        <li>Report Found</li>
+                        <li>About Us</li>
+                    </ul>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Contact</h3>
+                    <p>Tel : +254 713 747 121</p>
+                    <p>Email : gwarokebiro@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                © Copyright 2025 Lost and Found<br>
+                All Right Reserved
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
