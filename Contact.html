@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <style>
+     body {
+      margin:0; 
+      font-family : Arial, sans-serif;
+      background : linear-gradient(to right, #fbd3e9, #fcd4b5);
+    }
+    header {
+      background: linear-gradient(to right, #fddddd, #fdfdcc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ccc;
+	  flex-wrap:wrap;
+      
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+      flex: 2;
+    }
+
+    nav button {
+      padding: 5px 10px;
+      border: 1px solid #aaa;
+      background: #eee;
+      cursor: pointer;
+      flex-shrink: 0;
+	  color:black;
+	  transition: background-color 0.3s, color 0.3s;
+    }
+	.links button:hover:not(.active) {
+      background-color: #ccc;
+    }
+	
+	.links button.active {
+      background-color: #666;
+      color: #fff;
+      border-color: #444;
+      font-weight: bold;
+    }
+  
+    h1 {
+      text-align: center;
+      color: darkgreen;
+      margin: 20px 0;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fef5e7;
+      padding: 30px;
+      border: 1px solid #444;
+      border-radius: 5px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #ddd;
+    }
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+    small {
+      font-size: 0.7rem;
+      color: #555;
+    }
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+    }
+    .button-group button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .button-group .send {
+      background: #222;
+      color: white;
+    }
+    .button-group .reset {
+      background: #eee;
+      color: black;
+      border: 1px solid #ccc;
+    }
+    footer {
+      background: linear-gradient(to right, #fddddd, #fdfdcc);
+      display: flex;
+      justify-content:space-between;
+      padding: 20px;
+      font-size: 12px;
+      margin-top: 40px;
+      border-top: 1px solid #ccc;
+    }
+	.footer-section{
+	 flex: 1;
+	 padding: 10px;
+	 }
+	
+    .footer-logo img {
+      height: 50px;
+    }
+
+  @media (max-width: 768px) {
+	header{
+	 flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+	}
+      nav {
+        justify-content: center;
+      }
+      nav button {
+        flex: 1 1 40%;
+        text-align: center;
+      }
+	  footer-section{
+	  text-align: center;
+    }
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="image.file" alt="Back To You Logo">
+      <div>BACK TO YOU<br><small class="logo-text">Discover. Connect. Return.</small></div>
+    </div>
+    <nav class="links">
+      <button>Home</button>
+      <button class="active">Contact</button>
+      <button>Report Lost</button>
+      <button>Found</button>
+      <button>Report Found</button>
+      <button>Profile</button>
+      <button>Sign Out</button>
+    </nav>
+  </header>
+
+  <h1>Contact</h1>
+  <div class="form-container">
+    <form action="http://localhost/LOS/submit_contact.php" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Title :</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="photo">Upload Photo :</label>
+        <input type="file" id="photo" name="photo">
+        <small>(Upload if available)</small>
+      </div>
+      <div class="button-group">
+        <button type="submit" class="send">Send</button>
+        <button type="reset" class="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="footer-logo.png" alt="Lost & Found">
+    </div>
+    <div class="footer-section">
+      <strong>Site</strong><br>
+      Lost<br>
+      Report Lost<br>
+      Found<br>
+      Report Found<br>
+      About Us
+    </div>
+    <div class="footer-section">
+      <small>&copy; Copyright 2025 Lost and Found<br>All Right Reserved</small>
+    </div>
+    <div class="footer-section">
+      <strong>Contact</strong><br>
+      Tel: +254 116520690<br>
+      Email: backtoyouu@gmail.com<br>
+    </div>
+  </footer>
+</body>
+</html>
