@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Main Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #fbd3e9, #fcd4b5);
+    }
+    header {
+      background: linear-gradient(to right, #fddddd, #fdfdcc);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+    nav button {
+      padding: 5px 10px;
+      border: 1px solid #aaa;
+      background: #eee;
+      cursor: pointer;
+    }
+    .main {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .item-card {
+      background: #eee;
+      padding: 15px;
+      width: 600px;
+      border-radius: 5px;
+    }
+    .user-card {
+      background: #fff;
+      border: 1px solid #000;
+      padding: 20px;
+      width: 300px;
+      border-radius: 5px;
+    }
+    .item-header, .item-image, .item-description {
+      margin-bottom: 10px;
+    }
+    .item-image {
+      background: #ccc;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .item-image div {
+      width: 80px;
+      height: 80px;
+      background: #aaa;
+      margin: 10px;
+    }
+    .user-card img {
+      width: 80px;
+      height: 80px;
+      background: #ccc;
+      border-radius: 50%;
+      display: block;
+      margin-bottom: 10px;
+    }
+    footer {
+      background: linear-gradient(to right, #fddddd, #fdfdcc);
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      font-size: 14px;
+    }
+    .footer-logo img {
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Back To You Logo">
+      <div>BACK TO YOU<br><small>Discover. Connect. Return.</small></div>
+    </div>
+    <nav>
+      <button>Home</button>
+      <button style="background: #ccc;">Lost</button>
+      <button>Report Lost</button>
+      <button>Found</button>
+      <button>Report Found</button>
+      <button>Profile</button>
+      <button>Sign Out</button>
+    </nav>
+  </header>
+  <h1 style="text-align:center;color:green;">Item</h1>
+  <div class="main">
+    <div class="item-card">
+      <div class="item-header">
+        <strong>Item Name</strong><br>
+        <small>Date</small>
+      </div>
+      <div class="item-image">
+        <div style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
+        <div></div>
+        <div style="border-radius: 50%;"></div>
+      </div>
+      <div class="item-description">
+        <strong>Title</strong><br>
+        <small>Location</small>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+      </div>
+    </div>
+    <div class="user-card">
+      <img src="profile-icon.png" alt="User Profile">
+      <strong>Name:</strong>
+      <p><strong>Last Online:</strong></p>
+      <p><strong>Registered:</strong></p>
+      <p><strong>Rating :</strong> __/5</p>
+      <button style="padding: 10px; background: #222; color: white; border: none; width: 100%;">Message</button>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-logo">
+      <img src="footer-logo.png" alt="Lost & Found">
+    </div>
+    <div>
+      <strong>Site</strong><br>
+      Lost<br>
+      Report Lost<br>
+      Found<br>
+      Report Found<br>
+      About Us
+    </div>
+    <div>
+      <small>&copy; Copyright 2025 Lost and Found<br>All Right Reserved</small>
+    </div>
+	<div>
+      <strong>Contact</strong><br>
+      Tel: +254 116520690<br>
+      Email: backtoyouu@gmail.com
+    </div>
+  </footer>
+</body>
+</html>
