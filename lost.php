@@ -11,6 +11,7 @@ if (!empty($search)) {
                             LEFT JOIN users u ON i.User_ID = u.User_ID 
                             WHERE i.Item_status = 'found' AND i.Item_name LIKE ? 
                             ORDER BY i.Date_reported DESC");
+                            
     $likeSearch = "%" . $search . "%";
     $stmt->bind_param("s", $likeSearch);
     $stmt->execute();

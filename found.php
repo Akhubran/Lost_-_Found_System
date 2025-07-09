@@ -11,6 +11,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/Lost_and_Found_System/connection.php';// H
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
 
 if (!empty($search)) {
+
     $stmt = $conn->prepare("SELECT i.*, u.Fname, u.Lname 
                             FROM items i 
                             LEFT JOIN users u ON i.User_ID = u.User_ID 
@@ -18,6 +19,7 @@ if (!empty($search)) {
                             ORDER BY i.Date_reported DESC");
     $likeSearch = "%" . $search . "%";
     $stmt->bind_param("s", $likeSearch);
+
     $stmt->execute();
     $result = $stmt->get_result();
 } else {
