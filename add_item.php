@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start();//starts a session to track user login
 include 'connection.php';
 
 // Check if user is logged in and has admin privileges

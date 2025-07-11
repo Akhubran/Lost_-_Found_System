@@ -21,7 +21,7 @@ if (!isset($_SESSION['created'])) {
 // Get all users for management
 $users = [];
 $query = "SELECT User_ID, Fname, Lname, Gmail, Contact, created_at, is_active 
-          FROM users_new 
+          FROM users_new
           ORDER BY created_at DESC";
 
 if ($stmt = $conn->prepare($query)) {

@@ -14,7 +14,7 @@ $username = trim($_POST['username']);
 $password = $_POST['password'];
 
 // Validate credentials
-$stmt = $conn->prepare("SELECT id, username, password, role, is_active FROM users WHERE username = ?");
+$stmt = $conn->prepare("SELECT User_ID, username, Password, role, is_active FROM users_new WHERE username = ?");
 $stmt->bind_param("s", $username);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -35,12 +35,12 @@ if ($result->num_rows === 1) {
         session_regenerate_id(true);
         
         // Set session variables
-        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['User_ID'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role'];
         
         // Update last login
-        $conn->query("UPDATE users SET last_login = NOW() WHERE id = {$user['id']}");
+        $conn->query("UPDATE users_new SET last_login = NOW() WHERE id = {$user['id']}");
         
         // Redirect based on role
         header("Location: " . ($user['role'] === 'admin' ? 'admin.php' : 'dashboard.php'));
