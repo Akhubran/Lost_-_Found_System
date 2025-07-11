@@ -1,14 +1,7 @@
 <?php 
 // Include database connection
-// If connection.php is in a parent directory:
 include '../connection.php';
 
-// If it's in a subdirectory called 'config':
-include 'config/connection.php';
-
-// Or use absolute path:
-include $_SERVER['DOCUMENT_ROOT'] . '/Lost_and_Found_System/connection.php';// Handle search
-$search = isset($_GET['search']) ? trim($_GET['search']) : '';
 
 if (!empty($search)) {
 
